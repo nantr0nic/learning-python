@@ -1,5 +1,3 @@
-# improv scratch whatever shit
-
 import os
 import string
 import random
@@ -8,27 +6,34 @@ import random
 letters = True
 digits = True
 punctuation = True
+letters_enabled = False
+digits_enabled = False
+punctuation_enabled = False
 length = 12
 
 # Password generator function
 def genpass(length):
     options = []
     if letters == True:
-        options.append('string.ascii_letters')
-    elif digits == True:
-        options.append('string.digits')
-    elif punctuation == True:
-        options.append('string.punctuation')
+        letters_enabled = string.ascii_letters
+        options.append(letters_enabled)
+    if digits == True:
+        digits_enabled = string.digits
+        options.append(digits_enabled)
+    if punctuation == True:
+        punctuation_enabled = string.punctuation
+        options.append(punctuation_enabled)
     elif letters == False and digits == False and punctuation == False:
         print("You must have at least 1 option enabled!")
         return
     generated = ''
     for i in range(0,length):
-        # Need to fix this... options list is being used as strings and not working
-        generated += random.choice("+ ".join(options))
+        if any(option in options for option in options): # lol it works but not really
+            generated += random.choice()
     print(f"Password: {generated}")
-    print(options)
+    # heuristic shit
     print(f"Letters = {letters} / digits = {digits} / punc = {punctuation}")
+    print(f"{letters_enabled} / {digits_enabled} / {punctuation_enabled} ")
     return
 
 # Checkbox function for main interface loop
