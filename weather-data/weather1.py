@@ -1,5 +1,6 @@
 import requests  # Helps track web requests
 from bs4 import BeautifulSoup  # Helps scrape / find / etc. html/xml/etc. things
+# win10toast didn't work last time I tried...
 from win10toast import ToastNotifier   # Makes windows notifications
 
 # weather for Portland, OR
