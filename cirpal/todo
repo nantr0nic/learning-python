@@ -1,0 +1,10 @@
+Use pygame to make a color palette maker thing.
+
+Move the circle around, change its color, if you like the color the hit spacebar and it prints that circle in place.
+If the circle is printed somehow the RGB is displayed to you or saved to file or you can export a picture of the window to file so libresprite can import palette from the image etc.
+
+Some features:
+- Mousewheel changes color randomly
+- Spacebar prints circle
+- Arrows (or WASD) move circle around
+- L / R clicking keeps the hue but changes brightness/saturation up / down
