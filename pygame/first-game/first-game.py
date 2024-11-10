@@ -44,7 +44,7 @@ def change_circle_color():
 ### Main game loop ###
 run = True
 while run:
-    pygame.time.delay(75) # delays 
+    pygame.time.delay(0) # delays 
 
     # Event-check loop
     for event in pygame.event.get(): 
