@@ -1,7 +1,5 @@
 # DICTIONARY TIME!!! woo.
 
-import os
-import random
 """
 os.system('cls')
 print("beginning\n\n\n")
@@ -29,7 +27,7 @@ dict_1 = {i: random.random() for i in range(1, 6)}
 for poop in dict_1: print(poop) # <-- .keys() is optional, default behavior returns keys
 for value in dict_1.values(): print(value)
 
-for crap in dict_1: 
+for crap in dict_1:
     if crap % 2 == 0: print(crap) # only even keys
 
 favorite_languages = {
@@ -42,7 +40,7 @@ for name in favorite_languages.keys():
     print(name.title() + ", thank you for taking the poll.")
 
 
-### items() returns key/value pair 
+### items() returns key/value pair
 ### keys() returns key (but is optional...)
 ### values() returns values
 
@@ -96,13 +94,13 @@ for topping in pizza['toppings']: print("\t" + topping)
 # Nesting a dictionary in  a dictionary
 
 users = {
-    'Andy': {
-        'height': 'tall',
-        'age': 33,
+    "Andy": {
+        "height": "tall",
+        "age": 33,
     },
-    'Heather': {
-        'height': 'short',
-        'age': 40,
+    "Heather": {
+        "height": "short",
+        "age": 40,
     },
 }
 

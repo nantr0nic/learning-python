@@ -5,7 +5,7 @@
 squares = [value**2 for value in range(1, 11)]
 print(squares)
 
-for num in range(1,21): 
+for num in range(1,21):
     print(num)
 
 mil = range(1,1000001) # Doesn't work if mil is made a list []
@@ -19,6 +19,7 @@ for num in range(3,31): print(num*3)
 cubes = [value**3 for value in range(1,11)]
 print (cubes)
 """
+
 """
 # tuples
 tuple = (1, 2, 3, 'hello', 'goodbye')
@@ -31,7 +32,7 @@ print(tuple[0])
 print(tuple[0] + tuple[2])
 """
 
-numbers = range(1,101)
+numbers = range(1, 101)
 
 for num in numbers:
     if num % 2 == 0:

@@ -1,5 +1,6 @@
-alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 shift = 3
+
 
 def caesar(message):
     result = []
@@ -12,15 +13,16 @@ def caesar(message):
         else:
             # If it's not a  letter, add it as is
             result.append(char)
-    return ''.join(result)
+    return "".join(result)
+
 
 while True:
     print("Caesar cipher. What is your message?")
     message = input("Message: ")
     shifted_message = caesar(message)
     print(f"Caesar-fied! --> {shifted_message}")
-    
+
     # Option to continue or exit
     option = input("Do you want to encode another message? (y/n): ").lower()
-    if option != 'y':
+    if option != "y":
         break

@@ -11,6 +11,7 @@ digits = True
 punctuation = True
 length = 12
 
+
 # Password generator function
 def genpass(length):
     options = [string.ascii_letters, string.digits, string.punctuation]
@@ -23,11 +24,12 @@ def genpass(length):
     elif letters == False and digits == False and punctuation == False:
         print("You must have at least 1 option enabled!")
         return
-    generated = ''
-    for i in range(0,length):
-        generated += random.choice('+ '.join(options))
+    generated = ""
+    for i in range(0, length):
+        generated += random.choice("+ ".join(options))
     print(f"Password: {generated}")
     return
+
 
 # Checkbox function for main interface loop
 def checkbox(text, checked):
@@ -37,42 +39,43 @@ def checkbox(text, checked):
         checked_str = "[ ] {}".format(text)
     return checked_str
 
+
 # Main loop
 while True:
-    os.system('cls')
+    os.system("cls")
     print(" # # # # # # # # # # #\n--> Password Generator <--\n # # # # # # # # # # #")
     print("Choose password options.")
-    print(checkbox('[L]etters', letters))
-    print(checkbox('[D]igits', digits))
-    print(checkbox('[P]unctuation', punctuation))
+    print(checkbox("[L]etters", letters))
+    print(checkbox("[D]igits", digits))
+    print(checkbox("[P]unctuation", punctuation))
     print(f"Password L[e]ngth: {length}")
     print("Type G to [G]enerate or X to E[x]it!")
-    
+
     choice = input(">> ").lower().strip()
-    
+
     # Input loop
     while True:
-        if choice == 'l':
+        if choice == "l":
             letters = not letters
             break
-        elif choice == 'd':
+        elif choice == "d":
             digits = not digits
             break
-        elif choice == 'p':
+        elif choice == "p":
             punctuation = not punctuation
             break
-        elif choice == 'e':
+        elif choice == "e":
             print("How many characters long do you want the password to be?")
             length = int(input(">> ").strip())
             break
-        elif choice == 'g':
+        elif choice == "g":
             genpass(length)
             input("Press any key to continue!")
             break
-        elif choice == 'x':
+        elif choice == "x":
             break
         else:
             print("Not a valid option.")
             break
-    if choice == 'x':
+    if choice == "x":
         break

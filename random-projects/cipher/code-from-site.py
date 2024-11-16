@@ -1,14 +1,12 @@
-shift = 3 # defining the shift count
+shift = 3  # defining the shift count
 
 text = "HELLO WORLD"
 
 encryption = ""
 
 for c in text:
-
     # check if character is an uppercase letter
     if c.isupper():
-
         # find the position in 0-25
         c_unicode = ord(c)
 
@@ -26,10 +24,9 @@ for c in text:
         encryption = encryption + new_character
 
     else:
-
         # since character is not uppercase, leave it as it is
         encryption += c
-        
-print("Plain text:",text)
 
-print("Encrypted text:",encryption)
+print("Plain text:", text)
+
+print("Encrypted text:", encryption)
