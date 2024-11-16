@@ -1,11 +1,14 @@
-# Vigenere from scratch. Fuck. 
+# Vigenere from scratch. Fuck.
 
-alphabet = '0a1b2c3d4e5f6g7h8i9j!k@l#“m$n% ^o&p*q(r)s-t_”u+v=w.x,y?zABCDEFGHIJKLMNOPQRSTUVWXYZ'
-key = ''
+alphabet = (
+    "0a1b2c3d4e5f6g7h8i9j!k@l#“m$n% ^o&p*q(r)s-t_”u+v=w.x,y?zABCDEFGHIJKLMNOPQRSTUVWXYZ"
+)
+key = ""
+
 
 # Cipher function
 def vigenere(message, key, direction=1):
-    result = ''
+    result = ""
     key_index = 0
     for char in message:
         if char in alphabet:
@@ -19,52 +22,55 @@ def vigenere(message, key, direction=1):
             result += char
     return result
 
+
 # Encrypt/decrypt (write) to file
 def filewrite(choice):
     while True:
         writechoice = input("Do you want to write this to file? (y/n) ").strip().lower()
-        if writechoice == 'y':
-             if choice == 'e':
-                with open('encrypted.txt', 'w') as file:
+        if writechoice == "y":
+            if choice == "e":
+                with open("encrypted.txt", "w") as file:
                     file.write(vigenere(message, key, direction=1))
                     print("Written to encrypted.txt!\n")
                 break
-             elif choice == 'd':
-                with open('decrypted.txt', 'w') as file:
+            elif choice == "d":
+                with open("decrypted.txt", "w") as file:
                     file.write(vigenere(message, key, direction=-1))
                     print("Written to decrypted.txt!\n")
                 break
-        elif writechoice == 'n':
+        elif writechoice == "n":
             break
         else:
             print("That's not y/n!")
             break
     return
-    
+
+
 # Encrypt/decrypt (read) from a file
 def fileread(choice):
     while True:
-        if choice == 'e':
-            with open('decrypted.txt', 'r') as file:
+        if choice == "e":
+            with open("decrypted.txt", "r") as file:
                 message = file.read().strip()
                 key = input("Input a key (Don't forget it!): ")
                 print("Encrypted message: " + vigenere(message, key, direction=1))
             break
-        elif choice == 'd':
-            with open('encrypted.txt', 'r') as file:
+        elif choice == "d":
+            with open("encrypted.txt", "r") as file:
                 message = file.read()
                 key = input("What was the key for this message? --> ")
                 print("Decrypted message: " + vigenere(message, key, direction=-1))
             break
     return
 
+
 # Choose from file or not
 def fromfile(readchoice):
     while True:
-        if readchoice == 'y':
+        if readchoice == "y":
             fileread(choice)
             break
-        elif readchoice == 'n':
+        elif readchoice == "n":
             break
         else:
             break
@@ -75,7 +81,7 @@ def fromfile(readchoice):
 while True:
     choice = input("Do you wish to encrypt, decrypt, or quit? (e/d/q) ").strip().lower()
     while True:
-        if choice == 'e':
+        if choice == "e":
             readchoice = input("From file or no? (y/n) --> ").strip().lower()
             fromfile(readchoice)
             message = input("Enter a message: ")
@@ -83,7 +89,7 @@ while True:
             print("Encrypted message: " + vigenere(message, key, direction=1))
             filewrite(choice)
             break
-        elif choice == 'd':
+        elif choice == "d":
             readchoice = input("From file or no? (y/n) --> ").strip().lower()
             fromfile(readchoice)
             message = input("Enter a message: ")
@@ -91,11 +97,11 @@ while True:
             print("Decrypted message: " + vigenere(message, key, direction=-1))
             filewrite(choice)
             break
-        elif choice == 'q':
+        elif choice == "q":
             print("Farewell!")
             break
         else:
             print("That's not e or d or q!")
             break
-    if choice == 'q':
+    if choice == "q":
         break

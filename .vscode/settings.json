@@ -1,0 +1,11 @@
+{
+    "editor.cursorStyle": "block",
+    "files.autoSave": "onWindowChange",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.lightbulb.enabled": "off",
+    "editor.smoothScrolling": false,
+    "editor.inlineSuggest.enabled": false,
+    "editor.hover.enabled": true
+}
