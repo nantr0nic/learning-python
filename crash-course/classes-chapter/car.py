@@ -31,6 +31,7 @@ class Car:
         """Add the given amount to the odometer reading."""
         self.odometer_reading += miles
 
+class ElectricCar(Car):
 
 my_new_car = Car("honda", "civic", 2007)
 print(my_new_car.get_descriptive_name())
