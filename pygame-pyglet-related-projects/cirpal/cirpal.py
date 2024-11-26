@@ -25,9 +25,18 @@ def run_cirpal():
         cf.check_events(circle, win, circle_group)
 
         win.fill((0, 0, 0))
+        # Draw all circles first
         for circles in circle_group.sprites():
             circles.draw_circle(win)
         circle.draw_circle(win)
+
+        # Check for hover and draw RGB values
+        mouse_pos = pygame.mouse.get_pos()
+        for circles in circle_group.sprites():
+            if circles.contains_point(mouse_pos):
+                circles.draw_rgb(win)
+        if circle.contains_point(mouse_pos):
+            circle.draw_rgb(win)
 
         pygame.display.flip()
         clock.tick(75)
