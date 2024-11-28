@@ -16,7 +16,7 @@ response = requests.get(url, headers=headers)
 if response.status_code == 200:
     # Parse the HTML content
     soup = BeautifulSoup(response.content, "html.parser")
-    # Find the div with the class "pclqee" <-- BTC price
+    # Find the span element with the class "pclqee" <-- BTC price
     price_element = soup.find("span", class_="pclqee")
 
     if price_element:
