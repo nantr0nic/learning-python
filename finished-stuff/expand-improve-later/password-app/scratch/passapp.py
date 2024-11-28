@@ -1,6 +1,9 @@
 # Not robustly tested but seems to work well
 # Review at a future date to streamline / revise / narrow
 
+### Move functions to separate file, use 'secrets' instead of random ###
+### Good script to practice GUI stuff with. ###
+
 import os
 import string
 import random
