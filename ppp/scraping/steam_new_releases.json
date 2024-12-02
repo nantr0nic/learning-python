@@ -1,0 +1,481 @@
+{
+  "timestamp": "2024-12-01 20:50:12",
+  "games": [
+    {
+      "title": "Void Crew",
+      "price": "$19.99",
+      "tags": [
+        "Co-op",
+        "Multiplayer",
+        "Space Sim",
+        "Adventure"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Lost But Found",
+      "price": "$4.79",
+      "tags": [
+        "Simulation",
+        "Casual",
+        "Job Simulator",
+        "Strategy"
+      ],
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
+    },
+    {
+      "title": "Star Wars Outlaws",
+      "price": "$52.49",
+      "tags": [
+        "Action",
+        "Singleplayer",
+        "Adventure",
+        "Action-Adventure"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "price": "$59.99",
+      "tags": [
+        "Open World",
+        "FPS",
+        "Post-apocalyptic",
+        "Survival"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Luma Island",
+      "price": "$15.99",
+      "tags": [
+        "RPG",
+        "Co-op",
+        "Farming Sim",
+        "Adventure"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "DRAGON QUEST III HD-2D Remake",
+      "price": "$59.99",
+      "tags": [
+        "RPG",
+        "JRPG",
+        "Pixel Graphics",
+        "Turn-Based Combat"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Farming Simulator 25",
+      "price": "$49.99",
+      "tags": [
+        "Simulation",
+        "Farming Sim",
+        "Realistic",
+        "Immersive Sim"
+      ],
+      "platforms": [
+        "win",
+        "mac"
+      ]
+    },
+    {
+      "title": "Call of Duty\u00ae: Black Ops 6",
+      "price": "$59.49",
+      "tags": [
+        "Action",
+        "Multiplayer",
+        "Shooter",
+        "FPS"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Dragon Age\u2122: The Veilguard",
+      "price": "$59.99",
+      "tags": [
+        "LGBTQ+",
+        "Fantasy",
+        "Singleplayer",
+        "RPG"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Red Dead Redemption",
+      "price": "$39.99",
+      "tags": [
+        "Open World",
+        "Western",
+        "Story Rich",
+        "Singleplayer"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "SONIC X SHADOW GENERATIONS",
+      "price": "$37.49",
+      "tags": [
+        "Action",
+        "3D Platformer",
+        "Platformer",
+        "Fast-Paced"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Romancing SaGa 2: Revenge of the Seven",
+      "price": "$49.99",
+      "tags": [
+        "JRPG",
+        "Tactical RPG",
+        "Party-Based RPG",
+        "3D"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Rivals of Aether II",
+      "price": "$23.99",
+      "tags": [
+        "Fighting",
+        "Multiplayer",
+        "Indie",
+        "2D Fighter"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "EA SPORTS FC\u2122 25 - FC Points",
+      "price": "$0.99",
+      "tags": [
+        "Sports",
+        "Simulation",
+        "Football (Soccer)",
+        "Controller"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "EA SPORTS FC\u2122 25 - FC Points",
+      "price": "$0.99",
+      "tags": [
+        "Sports",
+        "Simulation",
+        "Football (Soccer)",
+        "Controller"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "EA SPORTS FC\u2122 25 - FC Points",
+      "price": "$0.99",
+      "tags": [
+        "Sports",
+        "Simulation",
+        "Football (Soccer)",
+        "Controller"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "EA SPORTS FC\u2122 25 - FC Points",
+      "price": "$0.99",
+      "tags": [
+        "Sports",
+        "Simulation",
+        "Football (Soccer)",
+        "Controller"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "EA SPORTS FC\u2122 25 - FC Points",
+      "price": "$0.99",
+      "tags": [
+        "Sports",
+        "Simulation",
+        "Football (Soccer)",
+        "Controller"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "EA SPORTS FC\u2122 25 - FC Points",
+      "price": "$0.99",
+      "tags": [
+        "Sports",
+        "Simulation",
+        "Football (Soccer)",
+        "Controller"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "EA SPORTS FC\u2122 25 - FC Points",
+      "price": "$0.99",
+      "tags": [
+        "Sports",
+        "Simulation",
+        "Football (Soccer)",
+        "Controller"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "EA SPORTS FC\u2122 25 - FC Points",
+      "price": "$0.99",
+      "tags": [
+        "Sports",
+        "Simulation",
+        "Football (Soccer)",
+        "Controller"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Assassin's Creed Mirage",
+      "price": "$19.99",
+      "tags": [
+        "Action",
+        "Open World",
+        "Adventure",
+        "Assassin"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "MechWarrior 5: Clans",
+      "price": "$39.99",
+      "tags": [
+        "Action",
+        "Simulation",
+        "Shooter",
+        "FPS"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Neva",
+      "price": "$15.99",
+      "tags": [
+        "Adventure",
+        "Platformer",
+        "Atmospheric",
+        "Puzzle"
+      ],
+      "platforms": [
+        "win",
+        "mac"
+      ]
+    },
+    {
+      "title": "Drova - Forsaken Kin",
+      "price": "$22.49",
+      "tags": [
+        "RPG",
+        "Exploration",
+        "Action RPG",
+        "Character Customization"
+      ],
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
+    },
+    {
+      "title": "WEBFISHING",
+      "price": "$4.99",
+      "tags": [
+        "Fishing",
+        "Casual",
+        "Multiplayer",
+        "Cute"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "price": "$52.49",
+      "tags": [
+        "RPG",
+        "Anime",
+        "JRPG",
+        "Turn-Based Combat"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "DRAGON BALL: Sparking! ZERO",
+      "price": "$69.99",
+      "tags": [
+        "Anime",
+        "Action",
+        "Multiplayer",
+        "3D Fighter"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "DRAGON BALL: Sparking! ZERO",
+      "price": "$69.99",
+      "tags": [
+        "Anime",
+        "Action",
+        "Multiplayer",
+        "3D Fighter"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "DICEOMANCER",
+      "price": "$13.49",
+      "tags": [
+        "Strategy",
+        "Card Game",
+        "Card Battler",
+        "Colorful"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Diplomacy is Not an Option",
+      "price": "$19.49",
+      "tags": [
+        "Strategy",
+        "Singleplayer",
+        "Sandbox",
+        "Base Building"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Five Hearts Under One Roof",
+      "price": "$15.99",
+      "tags": [
+        "Dating Sim",
+        "Sexual Content",
+        "FMV",
+        "Romance"
+      ],
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
+    },
+    {
+      "title": "THRONE AND LIBERTY",
+      "price": "Free To Play",
+      "tags": [
+        "MMORPG",
+        "Free to Play",
+        "Massively Multiplayer",
+        "RPG"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Mouthwashing",
+      "price": "$11.69",
+      "tags": [
+        "Psychological Horror",
+        "Story Rich",
+        "Horror",
+        "Atmospheric"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Ravenswatch",
+      "price": "$19.99",
+      "tags": [
+        "Roguelike",
+        "Co-op",
+        "Action",
+        "Action Roguelike"
+      ],
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "title": "Shadows of Doubt",
+      "price": "$14.99",
+      "tags": [
+        "Detective",
+        "Immersive Sim",
+        "Noir",
+        "Sandbox"
+      ],
+      "platforms": [
+        "win"
+      ]
+    }
+  ]
+}
