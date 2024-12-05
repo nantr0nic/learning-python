@@ -1,0 +1,13 @@
+A non-sense word generator for decoding practice.
+
+Generates non-sense words based on consonant and vowel sounds for flashcards.
+Ex: CV, VC, CVC, CCVC, CCVCC, VCVCC.
+
+Need to exclude CC's like "QZ", "XR", "KT", "MX".
+
+Implementation:
+Can either use text files with appropriate "CC" combinations or define inappropriate combinations
+then exclude them from the random generator.
+Or, alternatively, the improbables "QZ" and so on can remain and it can be left to the discretion
+of the user whether or not to transfer them to flash cards.
+    Reasoning: some (possibly more advanced) students may enjoy the challenge of the improbables.
