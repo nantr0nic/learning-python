@@ -1,3 +1,8 @@
+"""
+This is the Python scrip for the nonsense word generator.
+The main GUI version is available in main.py and through the exe file in ./dist/
+"""
+
 from gen import Sounds
 
 while True:
