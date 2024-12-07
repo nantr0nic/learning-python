@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>226</width>
+    <height>514</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>226</width>
+    <height>514</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>PointingHandCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>NWG</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QScrollArea" name="generated_words">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>181</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="widgetResizable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>179</width>
+       <height>329</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QComboBox" name="soundsBox">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Select sound combinations. C = consonant sound, V = vowel sound. (e.g. &quot;BAT&quot; is a CVC. &quot;STOP&quot; is a CCVC. etc.)</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>CV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>VC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CVC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CCVC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CVCC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CCVCC</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QCheckBox" name="include_qpk">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Include &quot;qu&quot;, &quot;ph&quot;, and &quot;kn&quot; at the beginning of the word.</string>
+    </property>
+    <property name="text">
+     <string>Include &quot;qu&quot;, &quot;ph&quot;, &quot;kn&quot;</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="include_digs">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Include &quot;th&quot;, &quot;ch&quot;, and &quot;sh&quot;</string>
+    </property>
+    <property name="text">
+     <string>Include digraphs</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="include_dips">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Include diphthongs like &quot;oi&quot;, &quot;aw&quot;, and &quot;ou&quot;</string>
+    </property>
+    <property name="text">
+     <string>Include dipthongs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="generate_button">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>460</y>
+      <width>131</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Generate!</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Include vowel teams like &quot;ai&quot;, &quot;ea&quot;, and &quot;ui&quot;</string>
+    </property>
+    <property name="text">
+     <string>Include vowel teams</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="words_number">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>130</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>130</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>How many:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
