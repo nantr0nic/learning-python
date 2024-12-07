@@ -8,10 +8,10 @@ from gen import Sounds
 while True:
     s = Sounds()
     print("Nonsense word generator!\nPick from the following list:")
-    print("CV, VC, CCV, CVC, CCVC, CVCC, CCVCC.")
+    print("CV, VC, CCV, VCC, CVC, CCVC, CVCC, CCVCC.")
     print("Or Q to quit.")
     choice = input(" >> ").lower().strip()
-    options = ["cv", "vc", "ccv", "cvc", "ccvc", "cvcc", "ccvcc"]
+    options = ["cv", "vc", "ccv", "vcc", "cvc", "ccvc", "cvcc", "ccvcc"]
     if choice == "q":
         print("Thank you! Goodbye.")
         break

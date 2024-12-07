@@ -1,3 +1,5 @@
+<h> Readme </h>
+<h> Non-Sense Word Generator </h>
 A non-sense word generator for decoding practice.
 
 Generates non-sense words based on consonant and vowel sounds for flashcards.
@@ -53,3 +55,17 @@ For words beginning or ending with "CC" sounds, I used a comprehensive list of t
 This is the first educational tool I've made and my first python program with a GUI! Please feel free to let me know if you have any questions, comments, suggestions, or if you find any problems -- I'd be happy to hear from you!
 
 andy15givingup@gmail.com
+
+----
+
+<h>TO RUN</h>
+
+If you're on Windows, there's an .exe file in /dist/. Or you can run the python files with the instructions below.
+
+----------
+(1) pip install -r requirements.txt
+
+(2) GUI: python main.py
+ -- or --
+(2) CLI: python ns-w-gen.py
+ 
