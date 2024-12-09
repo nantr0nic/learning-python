@@ -7,5 +7,6 @@
     "editor.lightbulb.enabled": "off",
     "editor.smoothScrolling": false,
     "editor.inlineSuggest.enabled": false,
-    "editor.hover.enabled": true
+    "editor.hover.enabled": true,
+    "python.analysis.autoImportCompletions": true
 }
