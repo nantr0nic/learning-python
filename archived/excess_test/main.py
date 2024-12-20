@@ -7,7 +7,6 @@ from player import Player
 
 def run_cc():
     clock = pygame.time.Clock()
-    # dt = 0
     pygame.init()
 
     # Make window
@@ -21,7 +20,7 @@ def run_cc():
 
     # Setup EVENT on timer for shooting projectiles. (Check events in functions file)
     SHOOT_EVENT = pygame.USEREVENT + 1
-    pygame.time.set_timer(SHOOT_EVENT, 420)  
+    pygame.time.set_timer(SHOOT_EVENT, 1)  
 
     # Main game loop
     while True:
@@ -38,7 +37,7 @@ def run_cc():
         # Refresh stuff
         pygame.display.flip()
         # 75 FPS
-        clock.tick(75)  
+        clock.tick(150)  
         print(f"Bullets #: {len(projectiles)}")
 
 

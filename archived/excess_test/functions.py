@@ -14,7 +14,7 @@ def check_events(player, projectiles, SHOOT_EVENT):
             if event.key == pygame.K_LEFT:
                 player.moving_x = -1
             elif event.key == pygame.K_RIGHT:
-                player.moving_x = 1
+                player.moving_x = 1              
             elif event.key == pygame.K_UP:
                 player.moving_y = -1
             elif event.key == pygame.K_DOWN:
@@ -35,9 +35,9 @@ def check_events(player, projectiles, SHOOT_EVENT):
                 
 def shoot_projectiles(player, projectiles):
     # Shooting is continuous. Keeping function classless.
-    for i in range(10):
-        angle = random.uniform(0, 2 * math.pi) # random angle in radians
-        speed = random.uniform(3, 6) # random speed
+    for i in range(2):
+        angle = random.normalvariate(0, 2 * math.pi) # random angle in radians
+        speed = random.uniform(1, 5) # random speed
         
     projectiles.add(Projectile(player.x, player.y, angle, speed))
     return projectiles
@@ -46,10 +46,5 @@ def update_state(surface, projectiles):
     # update state of projectiles
     projectiles.update()
     projectiles.draw(surface)
-    for projectile in projectiles.copy():
-        if (projectile.rect.right < 0 or
-            projectile.rect.left > surface.get_width() or
-            projectile.rect.bottom < 0 or
-            projectile.rect.top > surface.get_height()):
-            projectiles.remove(projectile)
+    
         

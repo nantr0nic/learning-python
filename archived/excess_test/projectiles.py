@@ -1,5 +1,6 @@
 import pygame
 import math
+import random
 from pygame.sprite import Sprite
 
 
@@ -12,8 +13,11 @@ class Projectile(Sprite):
         self.angle = angle
         self.speed = speed
         self.radius = 5
+        self.r = random.randint(100,255)
+        self.g = random.randint(25,100)
+        self.b = random.randint(0,255)
         self.image = pygame.Surface((self.radius * 2, self.radius * 2), pygame.SRCALPHA)
-        pygame.draw.circle(self.image, (255, 0 ,0), (self.radius, self.radius), self.radius)
+        pygame.draw.circle(self.image, (self.r, self.g, self.b), (self.radius, self.radius), self.radius)
         self.rect = self.image.get_rect(center=(x, y))
         self.x = float(self.rect.centerx)
         self.y = float(self.rect.centery)

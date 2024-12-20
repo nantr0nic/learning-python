@@ -1,0 +1,54 @@
+# Circle Cirvivors TODO List
+
+## Gameplay
+- [ ] Implement enemy spawning system
+- [ ] Add different types of enemies with unique behaviors
+- [ ] Create a leveling system for the player
+- [ ] Implement power-ups and upgrades for the player
+- [ ] Add a scoring system
+
+## Player
+- [x] Fix player visibility issue
+- [ ] Implement player health system
+- [ ] Add player animations (e.g., when moving or taking damage)
+- [ ] Create different player abilities or attacks
+
+## Projectiles
+- [x] Fix projectile movement and screen boundary issues
+- [ ] Add different types of projectiles (e.g., homing missiles, spread shots)
+- [ ] Implement projectile collision with enemies
+- [ ] Add visual effects for projectile impacts
+
+## UI/UX
+- [ ] Create a main menu
+- [ ] Implement a pause menu
+- [ ] Add a HUD (Head-Up Display) showing player health, score, etc.
+- [ ] Design and implement game over screen
+- [ ] Add sound effects and background music
+
+## Performance & Optimization
+- [ ] Optimize projectile management for better performance
+- [ ] Implement object pooling for frequently created/destroyed objects
+- [ ] Profile and optimize game loop for consistent frame rate
+
+## Bug Fixes
+- [x] Fix player circle visibility
+- [x] Correct projectile removal at screen boundaries
+
+## Polish
+- [ ] Add particle effects (e.g., explosions, trails) (?) (OpenGL... naw.)
+- [ ] Implement screen shake for impactful events
+- [ ] Add visual feedback for player actions (e.g., flashing when shooting)
+
+## Testing
+- [ ] Create unit tests for core game mechanics
+- [ ] Perform thorough playtesting and balance adjustments
+
+## Documentation
+- [ ] Write a README.md file with game instructions and controls
+- [ ] Document code with clear comments and docstrings
+
+## Future Enhancements
+- [ ] Implement save/load game feature
+- [ ] Add multiple levels or environments
+
