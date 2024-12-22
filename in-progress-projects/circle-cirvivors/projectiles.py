@@ -12,12 +12,15 @@ class Projectile(Sprite):
         self.angle = angle
         self.speed = speed
         self.radius = 5
-        self.image = pygame.Surface((self.radius * 2, self.radius * 2), pygame.SRCALPHA)
-        pygame.draw.circle(self.image, (255, 0 ,0), (self.radius, self.radius), self.radius)
+        self.image = pygame.Surface(
+            (self.radius * 2, self.radius * 2), pygame.SRCALPHA
+        )
+        pygame.draw.circle(
+            self.image, (255, 0, 0), (self.radius, self.radius), self.radius
+        )
         self.rect = self.image.get_rect(center=(x, y))
         self.x = float(self.rect.centerx)
         self.y = float(self.rect.centery)
-        
 
     def update(self):
         """Update movement of each individual projectile (in group)."""
@@ -29,4 +32,3 @@ class Projectile(Sprite):
     def draw(self, surface):
         """Draw projectile. So far just circles."""
         surface.blit(self.image, self.rect)
-        

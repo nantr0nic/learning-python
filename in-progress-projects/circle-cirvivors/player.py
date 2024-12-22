@@ -24,9 +24,14 @@ class Player(Sprite):
         # For y-axis -1 is up and 1 is down
         self.moving_y = 0
         # Setup image / rect for Sprite + collision stuff.
-        self.image = pygame.Surface((self.radius * 2, self.radius * 2), pygame.SRCALPHA)
+        self.image = pygame.Surface(
+            (self.radius * 2, self.radius * 2), pygame.SRCALPHA
+        )
         pygame.draw.circle(
-            self.image, (self.r, self.g, self.b), (self.radius, self.radius), self.radius
+            self.image,
+            (self.r, self.g, self.b),
+            (self.radius, self.radius),
+            self.radius,
         )
         self.rect = self.image.get_rect(center=(self.x, self.y))
 
