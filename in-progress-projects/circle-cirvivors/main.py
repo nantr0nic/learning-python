@@ -2,7 +2,9 @@ import pygame
 from pygame.sprite import Group
 
 import functions as func
+import settings as s
 from player import Player
+from enemies import spawn_timer
 
 
 def run_cc():
@@ -11,34 +13,35 @@ def run_cc():
     pygame.init()
 
     # Make window
-    winx = 1280
-    winy = 720
-    win = pygame.display.set_mode((winx, winy))  # makes the window
+    win = pygame.display.set_mode(
+        (s.window_width, s.window_height)
+    )  # makes the window
     pygame.display.set_caption("Circle Cirvivors")  # captions the window
 
     player = Player(win)
     projectiles = Group()
     enemies = Group()
 
-    # Setup EVENT on timer for shooting projectiles. (Check events in functions file)
+    # EVENTS for projectiles shooting and enemy spawning. (Check events in functions file)
     SHOOT_EVENT = pygame.USEREVENT + 1
     SPAWN_EVENT = pygame.USEREVENT + 2
-    initial_spawn_interval = 1000  # milliseconds
-    spawn_interval_decrement = 50  # milliseconds
-    decrement_interval = 2000  # 5 seconds in milliseconds
-    current_spawn_interval = initial_spawn_interval
-    last_decrement_time = 0
+    ROUND_TIMER = pygame.USEREVENT + 3
     pygame.time.set_timer(SHOOT_EVENT, 250)
-    pygame.time.set_timer(SPAWN_EVENT, current_spawn_interval)
-
-    speed = 5
+    pygame.time.set_timer(SPAWN_EVENT, s.current_spawn_interval)
+    pygame.time.set_timer(ROUND_TIMER, 1000)
 
     # Main game loop
     while True:
         current_time = pygame.time.get_ticks()
         # Check for events
         func.check_events(
-            player, projectiles, enemies, speed, SHOOT_EVENT, SPAWN_EVENT
+            win,
+            player,
+            projectiles,
+            enemies,
+            SHOOT_EVENT,
+            SPAWN_EVENT,
+            ROUND_TIMER,
         )
 
         # Draw black background
@@ -48,16 +51,20 @@ def run_cc():
         player.update(win)
         func.update_state(win, projectiles, enemies, player)
 
+        # Draw / begin round countdown
+        func.round_countdown(win)
+
+        func.draw_healthbar(win)
+
         # Refresh stuff
         pygame.display.flip()
 
-        # 75 FPS
-        clock.tick(75)
-        if current_time - last_decrement_time >= decrement_interval:
-            current_spawn_interval = max(current_spawn_interval - spawn_interval_decrement, 100)
-            pygame.time.set_timer(SPAWN_EVENT, current_spawn_interval)
-            last_decrement_time = current_time
-            print(f"Current spawn: {current_spawn_interval}")
+        # 80 FPS
+        clock.tick(80)
+
+        # Spawn frequency timer
+        spawn_timer(current_time, SPAWN_EVENT)
+
         # debug: print(f"Bullets #: {len(projectiles)}")
 
 

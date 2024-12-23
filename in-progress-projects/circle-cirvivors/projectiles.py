@@ -2,21 +2,29 @@ import pygame
 import math
 from pygame.sprite import Sprite
 
+import settings as s
+
 
 class Projectile(Sprite):
     """Class for projectiles. Will be instantiated for various projectiles the player emits."""
 
-    def __init__(self, x, y, angle, speed):
+    def __init__(self, x, y, angle, speed, size):
         """Initialize -- x and y origin at player position."""
         super(Projectile, self).__init__()
         self.angle = angle
         self.speed = speed
-        self.radius = 5
+        self.radius = size
+        self.r = s.projectile_color[0]
+        self.g = s.projectile_color[1]
+        self.b = s.projectile_color[2]
         self.image = pygame.Surface(
             (self.radius * 2, self.radius * 2), pygame.SRCALPHA
         )
         pygame.draw.circle(
-            self.image, (255, 0, 0), (self.radius, self.radius), self.radius
+            self.image,
+            (self.r, self.g, self.b),
+            (self.radius, self.radius),
+            self.radius,
         )
         self.rect = self.image.get_rect(center=(x, y))
         self.x = float(self.rect.centerx)

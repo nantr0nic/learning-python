@@ -1,6 +1,9 @@
 import pygame
 from pygame.sprite import Sprite
 
+import settings as s
+import functions as func
+
 
 class Player(Sprite):
     def __init__(self, surface):
@@ -13,11 +16,11 @@ class Player(Sprite):
         )
         self.x = player_pos.x
         self.y = player_pos.y
-        # Player is a circle by default. Radius = size.
-        self.radius = 20
-        self.r = 140
-        self.g = 210
-        self.b = 205
+        # Player appearance is a circle by default.
+        self.radius = s.player_size
+        self.r = s.player_color[0]
+        self.g = s.player_color[1]
+        self.b = s.player_color[2]
         # Movement flags
         # For x-axis -1 is left and 1 is right
         self.moving_x = 0

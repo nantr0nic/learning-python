@@ -9,7 +9,9 @@ class Circle(Sprite):
         """Define circle attributes like position, radius, color."""
         super(Circle, self).__init__()
         self.surface = win
-        object_pos = pygame.math.Vector2(win.get_width() / 2, win.get_height() / 2)
+        object_pos = pygame.math.Vector2(
+            win.get_width() / 2, win.get_height() / 2
+        )
         self.x = object_pos.x
         self.y = object_pos.y
         self.radius = 20
@@ -31,7 +33,9 @@ class Circle(Sprite):
 
     def draw_circle(self, win):
         """Draw the circle."""
-        pygame.draw.circle(win, (self.r, self.g, self.b), (self.x, self.y), self.radius)
+        pygame.draw.circle(
+            win, (self.r, self.g, self.b), (self.x, self.y), self.radius
+        )
         # Movement
         if self.moving_x == -1:
             self.x -= 5
@@ -44,7 +48,9 @@ class Circle(Sprite):
 
     def stamp_circle(self, win):
         """Stamp the circle as it is."""
-        pygame.draw.circle(win, (self.r, self.g, self.b), (self.x, self.y), self.radius)
+        pygame.draw.circle(
+            win, (self.r, self.g, self.b), (self.x, self.y), self.radius
+        )
         print("stamp")
 
     def capture_state(self):
@@ -76,7 +82,9 @@ class Circle(Sprite):
     def draw_rgb(self, win):
         """Draw the RGB values of the circle."""
         self.font = pygame.font.SysFont(None, 30)
-        self.text = self.font.render(f"RGB: ({self.r}, {self.g}, {self.b})", True, (255, 255, 255))
+        self.text = self.font.render(
+            f"RGB: ({self.r}, {self.g}, {self.b})", True, (255, 255, 255)
+        )
         # Position text above the circle
         text_rect = self.text.get_rect()
         text_rect.centerx = self.x
