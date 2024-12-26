@@ -37,7 +37,7 @@
 - [x] Correct projectile removal at screen boundaries
 
 ## Polish
-- [ ] Add particle effects (e.g., explosions, trails) (?) (OpenGL... naw.)
+- [ ] Add particle effects (e.g., explosions, trails) (?) (OpenGL?)
 - [ ] Implement screen shake for impactful events
 - [ ] Add visual feedback for player actions (e.g., flashing when shooting)
 - [ ] Learn to speak Polish
