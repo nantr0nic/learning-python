@@ -1,7 +1,7 @@
 # Circle Cirvivors TODO List
 
 ## Gameplay
-- [ ] Implement enemy spawning system
+- [x] Implement enemy spawning system
 - [ ] Add different types of enemies with unique behaviors
 - [ ] Create a leveling system for the player
 - [ ] Implement power-ups and upgrades for the player
@@ -9,7 +9,8 @@
 
 ## Player
 - [x] Fix player visibility issue
-- [ ] Implement player health system
+- [o] Implement player health system
+   -- added health bar, make round system based on health / possibly limited number of enemies per round
 - [ ] Add player animations (e.g., when moving or taking damage)
 - [ ] Create different player abilities or attacks
 
@@ -27,7 +28,7 @@
 - [ ] Add sound effects and background music
 
 ## Performance & Optimization
-- [ ] Optimize projectile management for better performance
+- [?] Optimize projectile management for better performance
 - [ ] Implement object pooling for frequently created/destroyed objects
 - [ ] Profile and optimize game loop for consistent frame rate
 
@@ -39,6 +40,7 @@
 - [ ] Add particle effects (e.g., explosions, trails) (?) (OpenGL... naw.)
 - [ ] Implement screen shake for impactful events
 - [ ] Add visual feedback for player actions (e.g., flashing when shooting)
+- [ ] Learn to speak Polish
 
 ## Testing
 - [ ] Create unit tests for core game mechanics
