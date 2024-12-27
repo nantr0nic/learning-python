@@ -1,7 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
-import settings as s
+import config as c
 
 
 class Enemy(Sprite):
@@ -10,9 +10,9 @@ class Enemy(Sprite):
         super(Enemy, self).__init__()
         self.speed = speed
         self.size = size
-        self.r = s.enemy_color[0]
-        self.g = s.enemy_color[1]
-        self.b = s.enemy_color[2]
+        self.r = c.enemy_color[0]
+        self.g = c.enemy_color[1]
+        self.b = c.enemy_color[2]
         self.image = pygame.Surface((self.size, self.size))
         self.rect_draw = pygame.Rect(0, 0, self.size, self.size)
         pygame.draw.rect(self.image, (self.r, self.g, self.b), self.rect_draw)
@@ -35,10 +35,9 @@ class Enemy(Sprite):
 
 # Spawn timer
 def spawn_timer(current_time, SPAWN_EVENT):
-    if current_time - s.last_decrement_time >= s.decrement_interval:
-        s.current_spawn_interval = max(
-            s.current_spawn_interval - s.spawn_interval_decrement, 100
+    if current_time - c.last_decrement_time >= c.decrement_interval:
+        c.current_spawn_interval = max(
+            c.current_spawn_interval - c.spawn_interval_decrement, 100
         )
-        pygame.time.set_timer(SPAWN_EVENT, s.current_spawn_interval)
-        s.last_decrement_time = current_time
-        # debug: print(f"Current spawn: {current_spawn_interval}")
+        pygame.time.set_timer(SPAWN_EVENT, c.current_spawn_interval)
+        c.last_decrement_time = current_time

@@ -4,75 +4,77 @@ import math
 
 from projectiles import Projectile
 from enemies import Enemy
-import settings as s
+import config as c
 
 
 def check_events(
-    surface, player, projectiles, enemies, SHOOT_EVENT, SPAWN_EVENT, ROUND_TIMER
+    surface,
+    player,
+    projectiles,
+    enemies,
+    SHOOT_EVENT,
+    SPAWN_EVENT,
+    ROUND_TIMER,
+    game_state,
 ):
+    pressed = pygame.key.get_pressed()
+    if not game_state.paused:
+        if pressed[pygame.K_LEFT] and player.rect.left > 0:
+            player.x -= 5
+        if pressed[pygame.K_RIGHT] and player.rect.right < surface.get_width():
+            player.x += 5
+        if pressed[pygame.K_UP] and player.rect.top > 0:
+            player.y -= 5
+        if pressed[pygame.K_DOWN] and player.rect.bottom < surface.get_height():
+            player.y += 5
+    if pressed[pygame.K_q]:
+        return True
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            quit()
-
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
-                player.moving_x = -1
-            elif event.key == pygame.K_RIGHT:
-                player.moving_x = 1
-            elif event.key == pygame.K_UP:
-                player.moving_y = -1
-            elif event.key == pygame.K_DOWN:
-                player.moving_y = 1
-            elif event.key == pygame.K_q:
-                pygame.quit()
-
-        elif event.type == pygame.KEYUP:
-            if event.key == pygame.K_LEFT:
-                player.moving_x = 0
-            elif event.key == pygame.K_RIGHT:
-                player.moving_x = 0
-            elif event.key == pygame.K_UP:
-                player.moving_y = 0
-            elif event.key == pygame.K_DOWN:
-                player.moving_y = 0
-
+            return True
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_p:
+                game_state.paused = not game_state.paused
         elif event.type == SHOOT_EVENT:
             shoot_projectiles(player, projectiles)
         elif event.type == SPAWN_EVENT:
             spawn_enemies(
                 surface,
                 enemies,
-                s.enemy_speed,
-                s.enemy_size,
+                c.enemy_speed,
+                c.enemy_size,
             )
         elif event.type == ROUND_TIMER:
-            if s.round_time > 0:
+            if c.round_time > 0:
                 round_countdown(surface)
-                s.round_time -= 1
-            elif s.round_time <= 0:
-                round_countdown(surface)
-            if s.round_time == 15:
-                s.timer_color = [255, 155, 0]  # orange
-            elif s.round_time == 5:
-                s.timer_color = [255, 0, 0]  # red
+                c.round_time -= 1
+            elif c.round_time <= 0:
+                # c.round_running = False
+                game_state.state = "new_round"
+            if c.round_time == 15:
+                c.timer_color = [255, 155, 0]  # orange
+                c.timer_size = 50
+            elif c.round_time == 5:
+                c.timer_color = [255, 0, 0]  # red
+                c.timer_size = 60
+
+    return False
 
 
 def shoot_projectiles(player, projectiles):
     # Shooting is continuous in a circular direction.
-    for i in range(2):
-        angle = random.uniform(0, 2 * math.pi)  # random angle in radians
+    angle = random.uniform(0, 2 * math.pi)  # random angle in radians
 
     projectiles.add(
         Projectile(
-            player.x, player.y, angle, s.projectile_speed, s.projectile_size
+            player.x, player.y, angle, c.projectile_speed, c.projectile_size
         )
     )
     return projectiles
 
 
 def spawn_enemies(surface, enemies, speed, size):
-    # REFACTOR using surface edges rather than hard set numbers
     spawn_above = (
         random.randint(0, surface.get_width()),
         random.randint(-25, 0),
@@ -113,19 +115,19 @@ def update_state(surface, projectiles, enemies, player):
             projectiles.remove(projectile)
     # Detect projectile vs enemy collision + remove enemy
     pygame.sprite.groupcollide(projectiles, enemies, False, True)
-    # Detect square vs player collisions
+    # Detect enemy vs player collisions
     if pygame.sprite.spritecollideany(player, enemies):
-        s.player_health -= 1
-        s.healthbar_width = (s.player_health / 100) * surface.get_width()
-        print(f"Player health: {s.player_health}")
+        c.player_health -= 1
+        c.healthbar_width = (c.player_health / 100) * surface.get_width()
 
 
+# Timer for rounds.
 def round_countdown(surface):
-    font = pygame.font.SysFont(None, 45)
+    font = pygame.font.SysFont(None, c.timer_size)
     text = font.render(
-        f"{s.round_time}",
+        f"{c.round_time}",
         True,
-        (s.timer_color[0], s.timer_color[1], s.timer_color[2]),
+        (c.timer_color[0], c.timer_color[1], c.timer_color[2]),
     )
     text_rect = text.get_rect()
     text_rect.centerx = surface.get_width() / 2
@@ -133,17 +135,18 @@ def round_countdown(surface):
     surface.blit(text, text_rect)
 
 
+# Bottom player health bar.
 def draw_healthbar(surface):
-    healthbar_width = s.healthbar_width
+    healthbar_width = c.healthbar_width
     healthbar_rect = pygame.Rect(
         0, (surface.get_height() - 20), healthbar_width, 10
     )
     pygame.draw.rect(
         surface,
-        (s.health_color[0], s.health_color[1], s.health_color[2]),
+        (c.health_color[0], c.health_color[1], c.health_color[2]),
         healthbar_rect,
     )
-    if s.player_health <= 55:
-        s.health_color = [255, 155, 0]
-    if s.player_health <= 30:
-        s.health_color = [255, 0, 0]
+    if c.player_health <= 55:
+        c.health_color = [255, 155, 0]
+    if c.player_health <= 30:
+        c.health_color = [255, 0, 0]

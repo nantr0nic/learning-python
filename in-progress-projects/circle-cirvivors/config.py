@@ -1,6 +1,7 @@
 # Constant settings
 window_width = 1280
 window_height = 720
+round_running = None
 
 
 ##### Dynamic settings #####
@@ -24,6 +25,7 @@ last_decrement_time = 0
 # Projectile settings
 projectile_speed = 2
 projectile_size = 5
+projectile_reload = 500  # milliseconds
 projectile_color = [255, 0, 0]
 
 # Player settings
@@ -33,8 +35,10 @@ player_color = [140, 210, 205]
 health_color = [0, 255, 0]
 
 # Round settings
-round_time = 30  # seconds
+round_time = 3  # seconds
+timer_size = 45
 timer_color = [255, 255, 255]  # starts white
+current_round = 1
 
 # Health bar stuff
 healthbar_width = window_width

@@ -1,7 +1,11 @@
 # Circle Cirvivors TODO List
 
+## Fix/update/whatever
+- [ ] Make health bar size relative to total health (figuring future health point upgrades)
+- [ ] Make "new round" game state
+
 ## Gameplay
-- [ ] Implement enemy spawning system
+- [x] Implement enemy spawning system
 - [ ] Add different types of enemies with unique behaviors
 - [ ] Create a leveling system for the player
 - [ ] Implement power-ups and upgrades for the player
@@ -9,7 +13,7 @@
 
 ## Player
 - [x] Fix player visibility issue
-- [ ] Implement player health system
+- [x] Implement player health system
 - [ ] Add player animations (e.g., when moving or taking damage)
 - [ ] Create different player abilities or attacks
 
@@ -29,7 +33,7 @@
 ## Performance & Optimization
 - [ ] Optimize projectile management for better performance
 - [ ] Implement object pooling for frequently created/destroyed objects
-- [ ] Profile and optimize game loop for consistent frame rate
+- [?] Profile and optimize game loop for consistent frame rate
 
 ## Bug Fixes
 - [x] Fix player circle visibility

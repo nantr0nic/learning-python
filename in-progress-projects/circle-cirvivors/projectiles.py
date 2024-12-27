@@ -2,7 +2,7 @@ import pygame
 import math
 from pygame.sprite import Sprite
 
-import settings as s
+import config as c
 
 
 class Projectile(Sprite):
@@ -14,9 +14,9 @@ class Projectile(Sprite):
         self.angle = angle
         self.speed = speed
         self.radius = size
-        self.r = s.projectile_color[0]
-        self.g = s.projectile_color[1]
-        self.b = s.projectile_color[2]
+        self.r = c.projectile_color[0]
+        self.g = c.projectile_color[1]
+        self.b = c.projectile_color[2]
         self.image = pygame.Surface(
             (self.radius * 2, self.radius * 2), pygame.SRCALPHA
         )

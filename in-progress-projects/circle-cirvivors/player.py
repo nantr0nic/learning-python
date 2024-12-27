@@ -1,8 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
-import settings as s
-import functions as func
+import config as c
 
 
 class Player(Sprite):
@@ -17,10 +16,11 @@ class Player(Sprite):
         self.x = player_pos.x
         self.y = player_pos.y
         # Player appearance is a circle by default.
-        self.radius = s.player_size
-        self.r = s.player_color[0]
-        self.g = s.player_color[1]
-        self.b = s.player_color[2]
+        self.radius = c.player_size
+        # Player color is defined in config.py
+        self.r = c.player_color[0]
+        self.g = c.player_color[1]
+        self.b = c.player_color[2]
         # Movement flags
         # For x-axis -1 is left and 1 is right
         self.moving_x = 0
@@ -39,15 +39,7 @@ class Player(Sprite):
         self.rect = self.image.get_rect(center=(self.x, self.y))
 
     def update(self, surface):
-        # Movement
-        if self.moving_x == -1 and self.rect.left > 0:
-            self.x -= 5
-        elif self.moving_x == 1 and self.rect.right < surface.get_width():
-            self.x += 5
-        if self.moving_y == -1 and self.rect.top > 0:
-            self.y -= 5
-        elif self.moving_y == 1 and self.rect.bottom < surface.get_height():
-            self.y += 5
+        """Update player position and movement flags."""
         self.rect.centerx = self.x
         self.rect.centery = self.y
         self.draw(surface)
