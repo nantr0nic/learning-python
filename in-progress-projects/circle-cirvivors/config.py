@@ -13,7 +13,7 @@ enemy_color = [255, 255, 255]
 
 ### Enemy spawn settings ###
 # Spawn interval (milliseconds)
-initial_spawn_interval = 1000
+initial_spawn_interval = 500
 # How much faster to spawn
 spawn_interval_decrement = 50
 # How often decrease spawn interval
@@ -35,7 +35,7 @@ player_color = [140, 210, 205]
 health_color = [0, 255, 0]
 
 # Round settings
-round_time = 3  # seconds
+round_time = 30  # seconds
 timer_size = 45
 timer_color = [255, 255, 255]  # starts white
 current_round = 1
