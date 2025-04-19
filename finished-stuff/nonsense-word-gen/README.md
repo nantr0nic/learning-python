@@ -1,6 +1,6 @@
-#Readme
-##Non-Sense Word Generator </h>
-####A non-sense word generator for decoding practice.
+# Readme
+## Non-Sense Word Generator </h>
+#### A non-sense word generator for decoding practice.
 
 Generates non-sense words based on consonant and vowel sounds for flashcards.
 Ex: CV, VC, CCV, VCC, CVC, CCVC, CVCC, CCVCC.
